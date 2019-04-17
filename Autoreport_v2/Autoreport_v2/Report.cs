@@ -18,6 +18,7 @@ namespace Autoreport_v2
         public string[] range_indexes;
         public string[] effects;
         public string[] effecttypes;
+        public string[] limits;
         public DateTime[] starttimes;
         public DateTime[] endtimes;
         public string[] endwhereparts;

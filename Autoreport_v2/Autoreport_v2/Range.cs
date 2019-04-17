@@ -26,6 +26,7 @@ namespace Autoreport_v2
         public DateTime starttime;
         public DateTime endtime;
         public string endwherepart;
+        public string limitsstr;
         public string sqlstring;//sqlstring
         public string csvname;//csv的名字不包含后缀
         public string csvfullname;//全路径

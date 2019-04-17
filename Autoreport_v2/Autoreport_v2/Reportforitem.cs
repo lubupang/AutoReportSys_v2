@@ -17,6 +17,7 @@ namespace Autoreport_v2
             starttimes = new DateTime[ranges_count];
             endtimes = new DateTime[ranges_count];
             endwhereparts = new string[ranges_count];
+            limits= new string[ranges_count];
             string[] index;
 
             switch (report["effects"].ToString())
@@ -77,6 +78,16 @@ namespace Autoreport_v2
 
                     }
 
+                    break;
+            }
+            switch (report["limits"].ToString())
+            {
+                case "0":
+                    for (int i = 0; i < ranges_count; i++) { effects[i] = item.effect; }
+                    break;
+                default:
+                    index = report["limits"].ToString().Split('|');
+                    for (int i = 0; i < ranges.Length; i++) { effects[i] = index[i]; }
                     break;
             }
 

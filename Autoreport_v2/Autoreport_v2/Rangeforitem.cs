@@ -18,6 +18,7 @@ namespace Autoreport_v2
             this.starttime = report.starttimes[id ];
             this.endtime = report.endtimes[id ];
             this.endwherepart = report.endwhereparts[id ];
+            this.limitsstr = report.limits[id];
 
             Getsqlstring();
             this.Getcsvfullname();
@@ -85,7 +86,7 @@ namespace Autoreport_v2
                 }
                 selectpart = selectpart.Substring(0, selectpart.Length - 1);
             }
-            sqlstring = selectpart + " from " + sourcetable.name + " where " + sourcetable.datefieldname + " between " + "'" + starttime.ToString("yyyy/MM/dd") + "' and '" + endtime.ToString("yyyy/MM/dd") + "' and " + "nick='" + item.branding + "'"+ effectstr + campaign_modelstr + effecttypestr + " " + endwherepart + groupbypart + orderpart;
+            sqlstring = selectpart + " from " + sourcetable.name + " where " + sourcetable.datefieldname + " between " + "'" + starttime.ToString("yyyy/MM/dd") + "' and '" + endtime.ToString("yyyy/MM/dd") + "' and " + "nick='" + item.branding + "'"+ effectstr + campaign_modelstr + effecttypestr + " " + endwherepart + groupbypart + orderpart+limitsstr;
         }
         private void Getcsvfullname()
         {
