@@ -22,7 +22,7 @@ namespace Autoreport_v2
         {
             this.type = "item";
             this.datefieldname = "date";
-            names[0] = "item_by_day";
+            names[0] = "adl_item_by_day";
             names[1] = "item_by_sku";
             needdims[0] = new string[0];
             needdims[1] = new string[2];

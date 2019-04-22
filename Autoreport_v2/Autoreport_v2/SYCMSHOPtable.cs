@@ -37,11 +37,9 @@ namespace Autoreport_v2
             needdims[1][0] = "hour";
             needdims[2] = new string[2];
             needdims[2][0] = "keyword";
-            needdims[2][1] = "pcormb";
             needdims[3] = new string[3];
             needdims[3][0] = "source";
             needdims[3][1] = "sourcedetial";
-            needdims[3][2] = "pcormb";
             needdims[4] = new string[0];
             int indexk = 4;
             int findtime = 0;
